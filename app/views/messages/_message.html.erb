@@ -1,0 +1,8 @@
+<div class="message" id="<%= dom_id message %>">
+  <div class="card">
+    <div class="card-block">
+      <%= link_to "&times".html_safe, message, method: 'delete', class: 'close' %>
+      <strong><%= message.ip %></strong>: <%= message.content %>
+    </div>
+  </div>
+</div>

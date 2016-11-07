@@ -1,0 +1,14 @@
+<h1>One Room Chat</h1>
+
+<div class="chat-room">
+  <div class="messages">
+    <%= render @messages %>
+  </div>
+
+  <%= form_for Message.new, remote: true do |f| %>
+    <div class="form-inline">
+      <%= f.text_field :content, required: true, class: 'form-control' %>
+      <%= f.submit "Send", class: 'btn btn-secondary' %>
+    </div>
+  <% end %>
+</div>
